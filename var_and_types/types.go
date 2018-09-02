@@ -5,16 +5,28 @@ import (
 )
 
 func main()  {
-	a := 9
-	b := 9.8
+	var a int
+	a = 5
+	var b string = "golang"
+	fmt.Println(a,b)
 
-	c := a + int(b)
+	var c = 7
+	var d = "golang"
+	fmt.Println(c,d)
 
-	fmt.Println(a,b,c)
+	e,f := 8,"golang"
+	fmt.Println(e,f)
 
-	const (
-		c = 9
-		e = "month"
+	var g int = 9
+	var h float32 = 12.9
+	var i int
+	i = g + int(h)
+	fmt.Println(g,h,i)
+
+	const(
+		j = 8
+		k = "golang"
 	)
+	fmt.Println(j,k)
 
 }
