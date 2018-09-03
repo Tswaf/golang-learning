@@ -32,7 +32,7 @@ Golang支持以下基本数据类型
 *var varname type*  
 *var*为变量声明关键字，*varname*为变量名称，*type*为变量类型。  
 
-```
+```go
 var a int
 var b string
 var c uint32
@@ -41,7 +41,7 @@ var c uint32
 声明变量后还未显式给变量赋值，则变量会被自动赋值为*零值*。如整型类型变量的零值为*0*，字符串类型的零值为空串*“”*。  
 可以在声明变量的同时为变量赋初始值：
 
-```
+```go
 var a int = 5
 var b string = "golang"
 ```
@@ -50,7 +50,7 @@ var b string = "golang"
 Golang允许在声明变量时省略变量类型，而根据初始值自动推断变量类型。  
 *var varname = initValue*  
 
-```
+```go
 var a = 9
 var b = "golang"
 ```
@@ -61,7 +61,7 @@ var b = "golang"
 *var varA,varB type = initValueA,initValueB* //声明多个变量，并分别赋予初始值
 *var varA,varB = initValueA,initValueB* //类型推断
 
-```
+```go
 var a,b int
 var a,b int = 3,6
 var a,b = 3,"golang"
@@ -75,7 +75,7 @@ var (
 类型推断使得可以在声明变量时去掉变量类型，短操作再次省去*var*关键字
 *varname := initValue*
 
-```
+```go
 a := 8
 b := "golang"
 c,d := 9,"golang"
@@ -83,7 +83,7 @@ c,d := 9,"golang"
 
 使用短操作声明变量时有一个限制：*:=* 左边的变量至少有一个是之前未声明的，否则报错。
 
-```
+```go
 var a int = 4
 a,b := 5,7 //error
 ```
@@ -91,7 +91,7 @@ a,b := 5,7 //error
 ## 类型转换
 Golang是一门强数据类型的语言，变量被声明未一种类型后，只能使用该类型的值。
 
-```
+```go
 var a int = 6
 var b float32 = 7.8
 b = a //error
@@ -101,7 +101,7 @@ c := a + b //error
 不同数据类型的变量之间相互使用，必选使用类型转换，类型转换的语法为：  
 *Type(variable)*   *variable*是变量名称，*Type*是目标类型。  
 
-```
+```go
 a := 9
 b := 9.8
 c := a + int(b)
@@ -111,7 +111,7 @@ fmt.Println(a,b,c)
 ## 常量
 使用*const*关键字声明常量。  
 
-```
+```go
 const a = 8
 const b = "golang"
 const (
